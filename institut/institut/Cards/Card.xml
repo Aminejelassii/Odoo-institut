@@ -1,0 +1,10 @@
+<odoo>
+        <report
+            id="card_etudiants"
+            string="Student Card"
+            model="institut.etudiant"
+            report_type="qweb-pdf"
+            name="institut.report_etudiant"
+            file="institut.report_etudiant"/>
+
+</odoo>

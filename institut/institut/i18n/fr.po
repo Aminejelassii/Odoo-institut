@@ -1,0 +1,388 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* institut
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0-20220619\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-03 19:45+0000\n"
+"PO-Revision-Date: 2022-09-03 20:52+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.1.1\n"
+
+#. module: institut
+#: model_terms:ir.ui.view,arch_db:institut.report_etudiant
+msgid "<strong>Registration number</strong>"
+msgstr "<strong>Num d'enregistrement</strong>"
+
+#. module: institut
+#: model_terms:ir.ui.view,arch_db:institut.report_etudiant
+msgid "<strong>STUDENT CARD</strong>"
+msgstr "<strong>CARTE D'ÉTUDIANT</strong>"
+
+#. module: institut
+#: model:ir.model.fields,field_description:institut.field_institut_etudiant__adress
+#: model:ir.model.fields,field_description:institut.field_institut_professeur__adress
+msgid "Address :"
+msgstr "Adresse :"
+
+#. module: institut
+#: model_terms:ir.ui.view,arch_db:institut.report_etudiant
+msgid "Born on"
+msgstr "Né(e) le"
+
+#. module: institut
+#: model:ir.model.fields,field_description:institut.field_institut_department__classe_ids
+#: model:ir.model.fields,field_description:institut.field_institut_etudiant__classe_ids
+#: model:ir.model.fields,field_description:institut.field_institut_professeur__classe_ids
+msgid "Class :"
+msgstr "Classe :"
+
+#. module: institut
+#: model:ir.model.fields,field_description:institut.field_institut_etudiant__classe_id
+msgid "Class:"
+msgstr "Classe:"
+
+#. module: institut
+#: model:ir.ui.menu,name:institut.institut_classe_cat
+msgid "Classes"
+msgstr ""
+
+#. module: institut
+#: model:ir.ui.menu,name:institut.institut_classe_list
+msgid "Classes list"
+msgstr "Liste des classes"
+
+#. module: institut
+#: model:ir.model.fields,field_description:institut.field_institut_classe__code
+msgid "Code"
+msgstr ""
+
+#. module: institut
+#: model:ir.model.fields,field_description:institut.field_institut_matiere__code
+msgid "Coefficient :"
+msgstr ""
+
+#. module: institut
+#: model:ir.model.fields,field_description:institut.field_institut_classe__create_uid
+#: model:ir.model.fields,field_description:institut.field_institut_department__create_uid
+#: model:ir.model.fields,field_description:institut.field_institut_etudiant__create_uid
+#: model:ir.model.fields,field_description:institut.field_institut_matiere__create_uid
+#: model:ir.model.fields,field_description:institut.field_institut_professeur__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: institut
+#: model:ir.model.fields,field_description:institut.field_institut_classe__create_date
+#: model:ir.model.fields,field_description:institut.field_institut_department__create_date
+#: model:ir.model.fields,field_description:institut.field_institut_etudiant__create_date
+#: model:ir.model.fields,field_description:institut.field_institut_matiere__create_date
+#: model:ir.model.fields,field_description:institut.field_institut_professeur__create_date
+msgid "Created on"
+msgstr "Créé sur"
+
+#. module: institut
+#: model:ir.model.fields,field_description:institut.field_institut_classe__date
+msgid "Date"
+msgstr ""
+
+#. module: institut
+#: model:ir.model.fields,field_description:institut.field_institut_etudiant__birthday
+#: model:ir.model.fields,field_description:institut.field_institut_professeur__birthday
+msgid "Date of Birth :"
+msgstr "Date de naissance :"
+
+#. module: institut
+#: model_terms:ir.ui.view,arch_db:institut.report_etudiant
+msgid "Degree in"
+msgstr "Licence en"
+
+#. module: institut
+#: model_terms:ir.ui.view,arch_db:institut.report_etudiant
+msgid "Student Card"
+msgstr "Carte D'étudiant"
+
+
+#. module: institut
+#: model:ir.model.fields,field_description:institut.field_institut_professeur__department_id
+msgid "Departement :"
+msgstr "Département :"
+
+#. module: institut
+#: model:ir.model.fields,field_description:institut.field_institut_etudiant__department_id
+msgid "Departement:"
+msgstr "Département :"
+
+#. module: institut
+#: model:ir.actions.act_window,name:institut.department_action_window
+msgid "Department window"
+msgstr "Liste des départements"
+
+#. module: institut
+#: model:ir.ui.menu,name:institut.institut_department_cat
+msgid "Departments"
+msgstr "Départements"
+
+#. module: institut
+#: model:ir.ui.menu,name:institut.institut_department_list
+msgid "Departments List"
+msgstr "Liste des départements"
+
+#. module: institut
+#: model:ir.model.fields,field_description:institut.field_institut_classe__display_name
+#: model:ir.model.fields,field_description:institut.field_institut_department__display_name
+#: model:ir.model.fields,field_description:institut.field_institut_etudiant__display_name
+#: model:ir.model.fields,field_description:institut.field_institut_matiere__display_name
+#: model:ir.model.fields,field_description:institut.field_institut_professeur__display_name
+msgid "Display Name"
+msgstr "Afficher un nom"
+
+#. module: institut
+#: model:ir.model.fields,field_description:institut.field_institut_professeur__email
+msgid "E-mail :"
+msgstr ""
+
+#. module: institut
+#: model:ir.model.fields,field_description:institut.field_institut_etudiant__email
+msgid "E-mail:"
+msgstr ""
+
+#. module: institut
+#: model:ir.model.fields.selection,name:institut.selection__institut_etudiant__sex__female
+#: model:ir.model.fields.selection,name:institut.selection__institut_professeur__sex__female
+msgid "Female"
+msgstr "Femelle"
+
+#. module: institut
+#: model:ir.model.fields,field_description:institut.field_institut_etudiant__f_name
+#: model:ir.model.fields,field_description:institut.field_institut_professeur__f_name
+msgid "Full name : "
+msgstr "Nom et prénom "
+
+#. module: institut
+#: model:ir.model.fields,field_description:institut.field_institut_classe__id
+#: model:ir.model.fields,field_description:institut.field_institut_department__id
+#: model:ir.model.fields,field_description:institut.field_institut_etudiant__id
+#: model:ir.model.fields,field_description:institut.field_institut_matiere__id
+#: model:ir.model.fields,field_description:institut.field_institut_professeur__id
+msgid "ID"
+msgstr ""
+
+#. module: institut
+#: model:ir.model.fields,field_description:institut.field_institut_etudiant__identity
+#: model:ir.model.fields,field_description:institut.field_institut_professeur__identity
+msgid "Identity : "
+msgstr "Identité "
+
+#. module: institut
+#: model:ir.model.fields,field_description:institut.field_institut_etudiant__image
+#: model:ir.model.fields,field_description:institut.field_institut_professeur__image
+msgid "Image"
+msgstr ""
+
+#. module: institut
+#: model:ir.ui.menu,name:institut.menu_root
+msgid "Institute"
+msgstr "Institut"
+
+#. module: institut
+#: model:ir.model.fields,field_description:institut.field_institut_classe____last_update
+#: model:ir.model.fields,field_description:institut.field_institut_department____last_update
+#: model:ir.model.fields,field_description:institut.field_institut_etudiant____last_update
+#: model:ir.model.fields,field_description:institut.field_institut_matiere____last_update
+#: model:ir.model.fields,field_description:institut.field_institut_professeur____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: institut
+#: model:ir.model.fields,field_description:institut.field_institut_classe__write_uid
+#: model:ir.model.fields,field_description:institut.field_institut_department__write_uid
+#: model:ir.model.fields,field_description:institut.field_institut_etudiant__write_uid
+#: model:ir.model.fields,field_description:institut.field_institut_matiere__write_uid
+#: model:ir.model.fields,field_description:institut.field_institut_professeur__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: institut
+#: model:ir.model.fields,field_description:institut.field_institut_classe__write_date
+#: model:ir.model.fields,field_description:institut.field_institut_department__write_date
+#: model:ir.model.fields,field_description:institut.field_institut_etudiant__write_date
+#: model:ir.model.fields,field_description:institut.field_institut_matiere__write_date
+#: model:ir.model.fields,field_description:institut.field_institut_professeur__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: institut
+#: model:ir.model.fields.selection,name:institut.selection__institut_etudiant__sex__male
+#: model:ir.model.fields.selection,name:institut.selection__institut_professeur__sex__male
+msgid "Male"
+msgstr "Mâle"
+
+#. module: institut
+#: model:ir.model.fields,field_description:institut.field_institut_classe__name
+#: model:ir.model.fields,field_description:institut.field_institut_department__name
+#: model:ir.model.fields,field_description:institut.field_institut_matiere__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: institut
+#: model:ir.model.fields,field_description:institut.field_institut_classe__num_matiere
+msgid "Number of subjects"
+msgstr "Nombre des matières"
+
+#. module: institut
+#: model:ir.model.fields,field_description:institut.field_institut_etudiant__phone
+#: model:ir.model.fields,field_description:institut.field_institut_professeur__phone
+msgid "Phone number :"
+msgstr "Numéro de téléphone :"
+
+#. module: institut
+#: model:ir.model.fields,field_description:institut.field_institut_etudiant__startdate
+msgid "Registration code : "
+msgstr "Code d'enregistrement "
+
+#. module: institut
+#: model_terms:ir.ui.view,arch_db:institut.etudiant_form_view
+#: model_terms:ir.ui.view,arch_db:institut.professeur_form_view
+msgid "Send Message"
+msgstr "Envoyer le message"
+
+#. module: institut
+#: model:ir.model.fields,field_description:institut.field_institut_etudiant__sex
+#: model:ir.model.fields,field_description:institut.field_institut_professeur__sex
+msgid "Sex"
+msgstr "Sexe"
+
+#. module: institut
+#: model:ir.model.fields,field_description:institut.field_institut_professeur__startdate
+msgid "Start date : "
+msgstr "Date de début "
+
+#. module: institut
+#: model:ir.model.fields,field_description:institut.field_institut_classe__student_ids
+msgid "Student :"
+msgstr "Étudiant :"
+
+#. module: institut
+#: model:ir.ui.menu,name:institut.institut_etudiant_list
+msgid "Student List"
+msgstr "Liste des étudiants"
+
+#. module: institut
+#: model:ir.actions.act_window,name:institut.etudiant_action_window
+msgid "Student window"
+msgstr "Fenêtre d'étudiant"
+
+#. module: institut
+#: model_terms:ir.ui.view,arch_db:institut.etudiant_form_view
+msgid "Student's first and last name"
+msgstr "Nom et prénom de l'étudiant"
+
+#. module: institut
+#: model:ir.ui.menu,name:institut.institut_etudiant_cat
+msgid "Students"
+msgstr "Etudiants"
+
+#. module: institut
+#: model:ir.model.fields,field_description:institut.field_institut_classe__matiere_ids
+#: model:ir.model.fields,field_description:institut.field_institut_etudiant__matiere_ids
+#: model:ir.model.fields,field_description:institut.field_institut_professeur__matiere_ids
+msgid "Subject :"
+msgstr "Matière :"
+
+#. module: institut
+#: model:ir.actions.act_window,name:institut.matiere_action_window
+msgid "Subject Window"
+msgstr "Liste des matières"
+
+#. module: institut
+#: model:ir.ui.menu,name:institut.institut_matiere_cat
+msgid "Subjects"
+msgstr "Matières"
+
+#. module: institut
+#: model:ir.ui.menu,name:institut.institut_matiere_list
+msgid "Subjects List"
+msgstr "Liste des matières"
+
+#. module: institut
+#: model_terms:ir.ui.view,arch_db:institut.etudiant_form_view
+msgid "Subjects List:"
+msgstr "Liste des matières:"
+
+#. module: institut
+#: model:ir.model.fields,field_description:institut.field_institut_classe__professeur_ids
+msgid "Teacher :"
+msgstr "Professeur :"
+
+#. module: institut
+#: model:ir.actions.act_window,name:institut.professeur_action_window
+msgid "Teacher window"
+msgstr "Fenêtre du professeur"
+
+#. module: institut
+#: model_terms:ir.ui.view,arch_db:institut.professeur_form_view
+msgid "Teacher's first and last name"
+msgstr "Nom et prénom de l'enseignant"
+
+#. module: institut
+#: model:ir.ui.menu,name:institut.institut_professeur_cat
+msgid "Teachers"
+msgstr "Professeurs"
+
+#. module: institut
+#: model:ir.ui.menu,name:institut.institut_professeur_list
+msgid "Teachers List"
+msgstr "Liste  des professeurs"
+
+#. module: institut
+#: model_terms:ir.ui.view,arch_db:institut.classe_calendar_view
+msgid "Timetable"
+msgstr "Emploi du temps"
+
+#. module: institut
+#: model:ir.actions.act_window,name:institut.classe_action_window
+msgid "class window"
+msgstr "liste des classes"
+
+#. module: institut
+#: model:ir.model,name:institut.model_institut_classe
+msgid "institut.classe"
+msgstr ""
+
+#. module: institut
+#: model:ir.model,name:institut.model_institut_department
+msgid "institut.department"
+msgstr ""
+
+#. module: institut
+#: model:ir.model,name:institut.model_institut_etudiant
+msgid "institut.etudiant"
+msgstr ""
+
+#. module: institut
+#: model:ir.model,name:institut.model_institut_matiere
+msgid "institut.matiere"
+msgstr ""
+
+#. module: institut
+#: model:ir.model,name:institut.model_institut_professeur
+msgid "institut.professeur"
+msgstr ""
+
+#. module: institut
+#: model_terms:ir.ui.view,arch_db:institut.classe_form_view
+msgid "subjects list :"
+msgstr "liste des matières :"
+
+#. module: institut
+#: model_terms:ir.ui.view,arch_db:institut.professeur_form_view
+msgid "work start date"
+msgstr "date de début de travail"

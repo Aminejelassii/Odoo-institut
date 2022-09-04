@@ -1,0 +1,71 @@
+<odoo>
+    <data>
+        <!-- explicit list view definition -->
+
+        <record model="ir.ui.view" id="classe_list_view">
+            <field name="name">Classes List</field>
+            <field name="model">institut.classe</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- explicit from view definition -->
+
+        <record model="ir.ui.view" id="classe_form_view">
+            <field name="name">classes </field>
+            <field name="model">institut.classe</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="name"/>
+                        <field name="num_matiere"/>
+                    </group>
+
+                    <group>
+                        <notebook>
+
+                            <page string="subjects list : ">
+
+                                <field name="matiere_ids" widget="many2many_tags"/>
+                            </page>
+
+                        </notebook>
+
+                    </group>
+                </form>
+            </field>
+        </record>
+        <!-- actions opening views on models -->
+<record model="ir.ui.view" id="classe_calendar_view">
+            <field name="name">institut.classe.calendar</field>
+            <field name="model">institut.classe</field>
+            <field name="arch" type="xml">
+                <calendar string="Timetable"  date_start="date">
+                    <field name="name"/>
+                </calendar>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="classe_action_window">
+            <field name="name">class window</field>
+            <field name="res_model">institut.classe</field>
+            <field name="view_mode">tree,form,calendar</field>
+        </record>
+
+
+
+        <!-- menu categories -->
+
+        <menuitem name="Classes" id="institut_classe_cat" parent="institut.menu_root"/>
+        <!--<menuitem name="Menu 2" id="university.menu_2" parent="university.menu_root"/>-->
+
+        <!-- actions -->
+
+        <menuitem name="Classes list" id="institut_classe_list" parent="institut_classe_cat"
+                  action="classe_action_window"/>
+        <!--<menuitem name="Server to list" id="university" parent="university.menu_2"-->
+        <!--action="university.action_server"/>-->
+    </data>
+</odoo>
