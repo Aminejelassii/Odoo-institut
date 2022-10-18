@@ -16,10 +16,13 @@ class InstitutProfesseur(models.Model):
     email = fields.Char('E-mail :')
     phone = fields.Char('Phone number :', size=8, required=True)
 
+    # Utilisation des relations Many2one et Many2many
+
     department_id = fields.Many2one('institut.department', string='Departement :')
     matiere_ids = fields.Many2many('institut.matiere', string='Subject :')
     classe_ids = fields.Many2many('institut.classe', string='Class :')
 
+    # Fonction pour contrôler le saisie d'email
     @api.onchange('email')
     def validate_mail(self):
         if self.email:
@@ -27,6 +30,7 @@ class InstitutProfesseur(models.Model):
             if match == None:
                 raise ValueError('Invalid E-mail')
 
+    # Fonction pour avoir le nom de professeur comme titre dans le form
     def name_get(self):
         result = []
         for professeur in self:
@@ -34,6 +38,7 @@ class InstitutProfesseur(models.Model):
             result.append((professeur.id, nom))
             return result
 
+    # Fonction pour envoyer des messages vers Whatsapp
     def send_message(self):
         if not self.phone:
             raise ValueError('Incorrect phone number')
@@ -45,9 +50,8 @@ class InstitutProfesseur(models.Model):
             'url': whatapp_api_url
         }
 
+    # Fonction pour éviter l'erreur de la date
     @api.constrains('birthday', 'startdate')
     def chek_date(self):
         if self.birthday > self.startdate:
             raise ValueError('Date of birth must be less than start date.')
-
-s

@@ -1,6 +1,6 @@
 <odoo>
     <data>
-        <!-- explicit list view definition -->
+        <!-- Vue Tree -->
 
         <record model="ir.ui.view" id="matiere_list_view">
             <field name="name">Subjects list</field>
@@ -13,7 +13,7 @@
             </field>
         </record>
 
-        <!-- explicit from view definition -->
+        <!-- Vue Form -->
 
         <record model="ir.ui.view" id="matiere_form_view">
             <field name="name">Subject</field>
@@ -28,7 +28,8 @@
                 </form>
             </field>
         </record>
-        <!-- actions opening views on models -->
+
+        <!-- Actions ouverture de vues sur des modèles -->
 
         <record model="ir.actions.act_window" id="matiere_action_window">
             <field name="name">Subject Window</field>
@@ -37,17 +38,14 @@
         </record>
 
 
-        <!-- menu categories -->
+        <!-- Catégories de menus -->
 
         <menuitem name="Subjects" id="institut_matiere_cat" parent="institut.menu_root"/>
-        <!--<menuitem name="Menu 2" id="university.menu_2" parent="university.menu_root"/>-->
 
-        <!-- actions -->
+        <!-- Actions -->
 
         <menuitem name="Subjects List" id="institut_matiere_list" parent="institut_matiere_cat"
                   action="matiere_action_window"/>
-        <!--<menuitem name="Server to list" id="university" parent="university.menu_2"-->
-        <!--action="university.action_server"/>-->
 
     </data>
 </odoo>

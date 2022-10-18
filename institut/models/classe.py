@@ -12,6 +12,7 @@ class InstitutClasse(models.Model):
     student_ids = fields.Many2many(comodel_name='institut.etudiant', string='Student :')
     date = fields.Date()
     # Field designe le nombre des matières
+
     num_matiere = fields.Integer(string="Number of subjects", compute="count_mat")
 
     # Fonction pour compter le nombre des matières

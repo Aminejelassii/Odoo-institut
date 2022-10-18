@@ -1,5 +1,7 @@
 <odoo>
     <data>
+        <!-- Vue Tree -->
+
         <record model="ir.ui.view" id="etudiant_list_view">
             <field name="name">Students list</field>
             <field name="model">institut.etudiant</field>
@@ -15,6 +17,8 @@
                 </tree>
             </field>
         </record>
+        <!-- Vue Kanban -->
+
         <record id='Student_kanban_view' model='ir.ui.view'>
             <field name="name">Student list</field>
             <field name="model">institut.etudiant</field>
@@ -41,9 +45,11 @@
                 </kanban>
             </field>
         </record>
-        <!-- explicit from view definition-->
+
+        <!-- Vue Form -->
+
         <record model="ir.ui.view" id="etudiant_form_view">
-            <field name="name">Student </field>
+            <field name="name">Student</field>
             <field name="model">institut.etudiant</field>
             <field name="arch" type="xml">
                 <form>
@@ -82,34 +88,24 @@
             </field>
         </record>
 
+        <!-- Actions ouverture de vues sur des modèles -->
 
-<!--                    <field name="name">institut.etudiant.search</field>-->
-<!--                    <field name="model">institut.etudiant</field>-->
-<!--                    <field name="arch" type="xml">-->
-<!--                        <search>-->
-<!--                            <field name="f_name" filter_domain="[('f_name','ilike', 'self')]"/>-->
-<!--                            <field name="startdate" filter_domain="[('startdate','ilike', 'self')]"/>-->
-<!--                            <field name="identity" filter_domain="[('identity','ilike', 'self')]"/>-->
-
-<!--                        </search>-->
-<!--                    </field>-->
-<!--                </record>-->
         <record model="ir.actions.act_window" id="etudiant_action_window">
             <field name="name">Student window</field>
             <field name="res_model">institut.etudiant</field>
             <field name="view_mode">kanban,tree,form</field>
         </record>
+        <!--Menu par défaut -->
+
         <menuitem name="Institute" id="institut.menu_root"/>
-        <!--  menu categories-->
+        <!-- Catégories de menus -->
 
         <menuitem name="Students" id="institut_etudiant_cat" parent="institut.menu_root"/>
-        <!--        <menuitem name="Menu 2" id="university.menu_2" parent="university.menu_root"/>-->
 
-        <!-- actions-->
+        <!-- Actions-->
+
         <menuitem name="Student List" id="institut_etudiant_list" parent="institut_etudiant_cat"
                   action="etudiant_action_window"/>
-        <!--        <menuitem name="Server to list" id="university" parent="university.menu_2"-->
-        <!--        action="university.action_server"/>-->
 
     </data>
 </odoo>

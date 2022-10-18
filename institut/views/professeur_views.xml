@@ -1,30 +1,35 @@
 <odoo>
     <data>
-               <record model="ir.ui.view" id="professeur_list_view">
-                    <field name="name">Teachers list</field>
-                    <field name="model">institut.professeur</field>
-                    <field name="arch" type="xml">
-                        <tree>
-                            <field name="f_name"/>
-                            <field name="sex"/>
-                            <field name="identity"/>
-                            <field name="birthday"/>
-                            <field name="startdate"/>
-                            <field name="email"/>
-                            <field name="phone"/>
+        <!-- Vue Tree -->
 
-                        </tree>
-                    </field>
-                </record>
+        <record model="ir.ui.view" id="professeur_list_view">
+            <field name="name">Teachers list</field>
+            <field name="model">institut.professeur</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="f_name"/>
+                    <field name="sex"/>
+                    <field name="identity"/>
+                    <field name="birthday"/>
+                    <field name="startdate"/>
+                    <field name="email"/>
+                    <field name="phone"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <!-- Vue Kanban -->
+
         <record id='professeur_kanban_view' model='ir.ui.view'>
             <field name="name">Teachers list</field>
             <field name="model">institut.professeur</field>
             <field name="arch" type="xml">
                 <kanban class="o_kanban_mobile" sample="1">
-                            <field name="f_name"/>
-                            <field name="id"/>
+                    <field name="f_name"/>
+                    <field name="id"/>
                     <templates>
-                      <t t-name="kanban-box">
+                        <t t-name="kanban-box">
                             <div class="oe_kanban_global_click o_kanban_record_has_image_fill ">
                                 <div class="o_kanban_image d-none d-md-block "
                                      t-attf-style="background-image: url(#{kanban_image('institut.professeur','image', record.id.raw_value)})"/>
@@ -32,7 +37,7 @@
                                     <strong>
                                         <field name="f_name"/>
                                     </strong>
-                                     <field name="identity"/>
+                                    <field name="identity"/>
                                 </div>
                             </div>
                         </t>
@@ -40,17 +45,20 @@
                 </kanban>
             </field>
         </record>
-                <record model="ir.ui.view" id="professeur_form_view">
-                    <field name="name">Teachers </field>
-                    <field name="model">institut.professeur</field>
-                    <field name="arch" type="xml">
-                        <form>
-                            <sheet>
-                                 <div class="oe_button_box" name="button_box">
+
+        <!-- Vue Form -->
+
+        <record model="ir.ui.view" id="professeur_form_view">
+            <field name="name">Teachers</field>
+            <field name="model">institut.professeur</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
                             <button string="Send Message" class="oe_highlight" type="object" name="send_message"
                                     icon="fa-whatsapp"/>
                         </div>
-                                <div>
+                        <div>
                             <field name="image" widget="image" class="oe_avatar"/>
                             <h1>
                                 <div>
@@ -61,31 +69,39 @@
                             </h1>
 
                         </div>
-                                <group>
-                                    <field name="sex"/>
-                                    <field name="identity"/>
-                                    <field name="adress"/>
-                                    <field name="birthday"/>
-                                    <field name="startdate" placeholder="work start date"/>
-                                    <field name="email" widget="email"/>
-                                    <field name="phone"/>
-                                    <field name="department_id"/>
-                                    <field name="classe_ids" widget="many2many_tags"/>
-                                    <field name="matiere_ids" widget="many2many_tags"/>
-                                </group>
-                            </sheet>
-                        </form>
-                    </field>
-                </record>
+                        <group>
+                            <field name="sex"/>
+                            <field name="identity"/>
+                            <field name="adress"/>
+                            <field name="birthday"/>
+                            <field name="startdate" placeholder="work start date"/>
+                            <field name="email" widget="email"/>
+                            <field name="phone"/>
+                            <field name="department_id"/>
+                            <field name="classe_ids" widget="many2many_tags"/>
+                            <field name="matiere_ids" widget="many2many_tags"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
 
-                <record model="ir.actions.act_window" id="professeur_action_window">
-                    <field name="name">Teacher window</field>
-                    <field name="res_model">institut.professeur</field>
-                    <field name="view_mode">kanban,tree,form</field>
-                </record>
-                <menuitem name="Teachers" id="institut_professeur_cat" parent="institut.menu_root"/>
-                <menuitem name="Teachers List" id="institut_professeur_list" parent="institut_professeur_cat"
-                          action="professeur_action_window"/>
+        <!-- Actions ouverture de vues sur des modèles -->
+
+        <record model="ir.actions.act_window" id="professeur_action_window">
+            <field name="name">Teacher window</field>
+            <field name="res_model">institut.professeur</field>
+            <field name="view_mode">kanban,tree,form</field>
+        </record>
+
+        <!-- Catégories de menus -->
+
+        <menuitem name="Teachers" id="institut_professeur_cat" parent="institut.menu_root"/>
+
+        <!-- Actions-->
+
+        <menuitem name="Teachers List" id="institut_professeur_list" parent="institut_professeur_cat"
+                  action="professeur_action_window"/>
 
     </data>
 </odoo>
