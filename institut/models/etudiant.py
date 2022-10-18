@@ -6,7 +6,7 @@ import re
 
 class InstitutEtudiant(models.Model):
     _name = 'institut.etudiant'
-    f_name = fields.Char('Full name : ', required=True )
+    f_name = fields.Char('Full name : ', required=True)
 
     sex = fields.Selection([('female', 'Female'), ('male', 'Male')])
     image = fields.Image()
@@ -22,6 +22,7 @@ class InstitutEtudiant(models.Model):
     matiere_ids = fields.Many2many(related='classe_id.matiere_ids')
     classe_ids = fields.Many2one('institut.classe', string='Class :')
 
+    # Fonction pour avoir le nom de l'etudiant comme titre dans le form
     def name_get(self):
         result = []
         for etudiant in self:
@@ -29,10 +30,7 @@ class InstitutEtudiant(models.Model):
         result.append((etudiant.id, nom))
         return result
 
- #   @api.constrains('birthday', 'startdate')
-  #  def chek_date(self):
-   #     if self.birthday > self.startdate:
-    #        raise ValueError('date de naissance doit etre inferieur a date dinscription')
+        # Fonction pour envoyer des messages vers Whatsapp
 
     def send_message(self):
         if not self.phone:
@@ -44,18 +42,3 @@ class InstitutEtudiant(models.Model):
             'target': 'new',
             'url': whatapp_api_url
         }
-
-
-
-# @api.onchange('department_id')
-# def _onchange_department(self):
-#   for i in self:
-#      return {'domain': {'classe_id': [('department_id', '=', i.department_id.id)]}}
-#   @api.depends('is_student')
-#   def _compute_person_type(self):
-#      for institut in self:
-#           institut.type = 'etud' if institut.is_student else 'Prof'
-
-#  def _write_person_type(self):
-#      for institut in self:
-#         institut.is_student = institut.type == 'etud'

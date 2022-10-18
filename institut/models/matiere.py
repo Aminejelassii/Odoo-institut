@@ -8,5 +8,4 @@ class InstitutMatiere(models.Model):
     name = fields.Char()
     code = fields.Char('Coefficient :', size=1)
 
-    #department_id = fields.Many2one('university.department', string='Departement:')
-    #professeur_ids = fields.Many2many('university.professeur', string='Professor:')
+

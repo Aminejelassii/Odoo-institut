@@ -50,23 +50,4 @@ class InstitutProfesseur(models.Model):
         if self.birthday > self.startdate:
             raise ValueError('Date of birth must be less than start date.')
 
-# def send_mail(self):
-#   self.ensure_one()
-#  mail = self.env.ref("institut.model_institut_professeur").id
-# ctx = {
-#    'default_model': 'institut.professeur',
-#    'default_res_id': self.id,
-##   'default_use_mail': bool(mail),
-# 'default_mail': mail,
-# 'default_composition_mode': 'comment',
-# 'email_to': self.email,
-
-# }
-# return {
-#   'type': 'ir.actions.act_window',
-#  'view_type': 'form',
-# 'view_mode': 'form',
-# 'res_model': 'mail.compose.message',
-#   'target': 'new',
-#  'context': ctx,
-# }
+s
